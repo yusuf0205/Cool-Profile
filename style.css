@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  --Dc: hsl(185, 75%, 39%);
+  --Vddb: hsl(229, 23%, 23%);
+  --Dgb: hsl(227, 10%, 46%);
+  --Dg: hsl(0, 0%, 59%);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Dc);
+  height: 800px;
+  width: 100%;
+  background-image: url("https://profile-card-component-main-d3.netlify.app/images/bg-pattern-top.svg"),
+    url("https://profile-card-component-main-d3.netlify.app/images/bg-pattern-bottom.svg");
+  background-position: bottom 50vh right 50vw, top 50vh left 50vw;
+  background-repeat: no-repeat;
+}
+
+.container {
+  z-index: 1;
+  background-color: white;
+  height: 360px;
+  width: 340px;
+  border-radius: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  font-family: "Kumbh Sans", sans-serif;
+  color: var(--Dgb);
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: -100px;
+}
+
+.top {
+  height: 140px;
+  background-image: url("https://profile-card-component-main-d3.netlify.app/images/bg-pattern-card.svg");
+}
+
+.victor {
+  border-radius: 50px 50px;
+  border: 5px solid white;
+  position: relative;
+  top: 80px;
+  transition: all 0.2s ease-in-out;
+}
+.victor:hover {
+  transform: scale(1.1, 1.1);
+}
+.par1 {
+  margin-top: 65px;
+}
+.town {
+  padding-bottom: 10px;
+}
+span {
+  font-weight: 700;
+  color: black;
+}
+.stats {
+  justify-content: center;
+  border-top: 0.05px var(--Dg) solid;
+  display: flex;
+  flex-direction: row;
+  padding-top: 25px;
+}
+.stat {
+  padding-left: 15px;
+  padding-right: 40px;
+  font-weight: 400;
+  font-size: 0.575em;
+  letter-spacing: 1px;
+}
+.bold {
+  letter-spacing: normal;
+  font-weight: 700;
+  color: black;
+  font-size: 16px;
+  padding-bottom: 5px;
+}
+#img1,
+#img2 {
+  border: none;
+  position: absolute;
+}
+#img1 {
+  top: -480px;
+  left: -370px;
+}
+#img2 {
+  top: 320px;
+  right: -390px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  z-index: 1;
+}
+.attribution a {
+  color: white;
+}
+
+@media all and (max-width: 1024px) {
+  #img1 {
+    top: -480px;
+    left: -140%;
+  }
+
+  #img2 {
+    top: 320px;
+    right: -140%;
+  }
+}
